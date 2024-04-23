@@ -1,4 +1,4 @@
-import Alunno from '/Alunno';
+import Alunno from './Alunno';
 import {useState,useEffect} from 'react';
 
 function App() {
@@ -21,9 +21,9 @@ function App() {
     <div className="App">
       {
         pronto?
-          alunni.map(a=>{
+          alunni.map(a=>(
             <Alunno alunno={a} popolaAlunni={popolaAlunni} key={a.id} />
-          })
+          ))
           :
           <div>Loading ...</div>
       }

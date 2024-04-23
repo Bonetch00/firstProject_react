@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export default function Alunno(alunno,popoAlunni){
+export default function Alunno(alunno,popolaAlunni){
     const [conferma,setConferma]= useState(false);
     const [cancellazione,setCancellazione]= useState(false);
 
@@ -8,7 +8,7 @@ export default function Alunno(alunno,popoAlunni){
         setConferma(false);
         setCancellazione(true);
         const response = await fetch(`http://localhost:8080/alunni/${alunni.id}`, {method: "DELETE"});
-        popoAlunni();
+        popolaAlunni();
     }
 
     function rischiesta(){
